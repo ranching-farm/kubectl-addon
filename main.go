@@ -28,7 +28,7 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "kubectl-ranching.farm",
+	Use:   "kubectl-ranching_farm",
 	Short: "Connect to ranching.farm AI-powered Kubernetes management",
 	Long: `This plugin allows you to connect your Kubernetes cluster to the ranching.farm
 platform. Once connected, you can interact with your cluster through our

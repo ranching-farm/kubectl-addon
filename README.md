@@ -13,18 +13,36 @@ ranching.farm is a Kubernetes management platform that leverages AI to simplify 
 
 We offer two ways of connecting your k8s deployment to our AI:
 
-1) Use our kubernetes-agent to deploy it straight with one-line into your k8s cluster.
+1) Use our [k8s-agent](https://github.com/ranching-farm/k8s-agent) to deploy it straight into your kubernetes cluster.
 2) Use our kubectl-addon (**this repository**) to run it locally on your machine using your kubectl configuration.
+
+## What does ranching.farm do?
+
+Once you are connected to ranching.farm through either the k8s-agent or the kubectl-addon, you gain access to a powerful AI-assisted Kubernetes management experience. Here's what you can do:
+
+- **AI-Powered Chat**: Interact with your cluster using natural language through either OpenAI's latest ChatGPT model or Anthropic's Claude. Choose the AI that best fits your needs.
+
+- **Kubernetes Command Execution**: The AI can utilize `kubectl`, `helm`, and `kustomize` to perform a wide range of operations on your cluster.
+
+- **Cluster Debugging**: Get assistance in debugging complex issues, including DNS problems within your cluster.
+
+- **Intelligent Analysis**: Receive insights and recommendations based on your cluster's state and configuration.
+
+- **Learning and Training**: Use the platform as an interactive learning tool to improve your Kubernetes skills.
+
+ranching.farm acts as an intelligent assistant, helping you manage, troubleshoot, and optimize your Kubernetes environment more efficiently.
 
 This kubectl addon allows you to connect your Kubernetes cluster to the [ranching.farm](https://ranching.farm) platform. Once connected, you can interact with your cluster through our AI-powered interface.
 
-The addon provides a secure connection between your local environment and our AI services, enabling real-time analysis and assistance while maintaining your cluster's security. This approach complements our kubernetes-agent option, offering flexibility in how you integrate with [ranching.farm](https://ranching.farm).
-
 ## 🚀 Quick Start
 
+1. Visit [ranching.farm](https://ranching.farm) and add your cluster to your account.
+2. Copy the Cluster ID and Cluster Secret provided on the website.
+3. Run the command in your terminal.
+
 ```bash
-kubectl krew install ranching.farm
-kubectl ranching.farm connect --cluster-id <cluster-id> --cluster-secret <cluster-secret>
+kubectl krew install ranching_farm
+kubectl ranching_farm connect --cluster-id <cluster-id> --cluster-secret <cluster-secret>
 ```
 
 ## 🌟 Features
@@ -42,7 +60,7 @@ kubectl ranching.farm connect --cluster-id <cluster-id> --cluster-secret <cluste
 1. [Install Krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
 2. Run:
    ```bash
-   kubectl krew install ranching.farm
+   kubectl krew install ranching_farm
    ```
 
 ### Manual Installation

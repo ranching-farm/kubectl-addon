@@ -108,7 +108,7 @@ func runMain() {
 	}
 	logging.Log("Success", "Connected to WebSocket", outputFormat)
 
-	channel := socket.Channel(fmt.Sprintf("cluster:%s", clusterId), nil)
+	channel := socket.Channel(fmt.Sprintf("cluster:%s:%s", clusterId, secret), nil)
 	join, err := channel.Join()
 	if err != nil {
 		logging.Log("Error", fmt.Sprintf("Failed to join channel: %v", err), outputFormat)
